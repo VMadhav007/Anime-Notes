@@ -1,0 +1,73 @@
+/* Create Note Section */
+.create-note {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 40px auto;
+    background: white;
+    padding: 25px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--black);
+    transition: transform 0.2s;
+  }
+  
+  .create-note:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--black);
+  }
+  
+  .create-note input,
+  .create-note textarea {
+    width: 100%;
+    border: 2px solid var(--black);
+    border-radius: 0; /* Ensure sharp corners */
+    padding: 12px;
+    outline: none;
+    font-size: 1.1em;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+    margin-bottom: 15px; /* Increased space between inputs */
+    box-sizing: border-box; /* Ensure border is included in width calculation */
+  }
+  
+  .create-note input {
+    border-bottom: 2px solid var(--black); /* Ensure distinct border */
+  }
+  
+  .create-note input::placeholder,
+  .create-note textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-style: italic; /* Make placeholder italic for distinction */
+  }
+  
+  .create-note button {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    background-color: var(--red);
+    color: white;
+    border: 2px solid var(--black);
+    padding: 10px 15px;
+    font-family: 'Oswald', sans-serif; /* Match font with headers */
+    font-weight: 700; /* Bolder button text */
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .create-note button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--black);
+  }
+  
+  .create-note button:active {
+    transform: translate(0, 0);
+    box-shadow: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .create-note {
+      width: 85%;
+      padding: 20px;
+    }
+  }

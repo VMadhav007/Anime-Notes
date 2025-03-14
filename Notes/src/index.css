@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap');
+
+:root {
+  --red: #ff3b3b;
+  --pink: #ff2a75;
+  --black: #222;
+  --light-bg: #f0efed;
+  --shadow-offset: 6px;
+}
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: var(--light-bg);
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  color: var(--black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Import component styles */
+@import './components./Header.css';
+@import './components./Input.css';
+@import './components./Note.css';
+@import './components./Footer.css';
+@import './components./App.css';

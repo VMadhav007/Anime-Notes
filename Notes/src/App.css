@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap');
+
+:root {
+  --red: #ff3b3b;
+  --pink: #ff2a75;
+  --black: #222;
+  --light-bg: #f0efed;
+  --shadow-offset: 6px;
+}
+
+/* Main Body Styling with Anime Background */
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: var(--light-bg);
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  color: var(--black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background elements */
+body:before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -100px;
+  right: -200px;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(255, 42, 117, 0.15),  /* Increased opacity */
+    rgba(255, 42, 117, 0.15) 2px, /* Smaller gap */
+    transparent 2px,
+    transparent 15px /* Reduced transparent spacing */
+  );
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(2px); /* Slight blur for better visibility */
+}
+
+.bg-lines {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  top: 30%;
+  left: -200px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-lines:before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -100px;
+  left: -100px;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.1), /* Increased opacity */
+    rgba(0, 0, 0, 0.1) 2px,
+    transparent 2px,
+    transparent 15px
+  );
+  filter: brightness(1.2) contrast(1.2); /* Boost visibility */
+}
+
+
+
+/* Add pink shapes as accents */
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Notes container - align to the left */
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Change from center to flex-start */
+  padding: 0 20px; /* Add some padding on sides */
+  clear: both;
+  padding-bottom: 30px;
+}
+.app-wrapper:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--pink);
+  bottom: 50px;
+  right: 10%;
+  z-index: -1;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .note {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .note {
+    width: calc(100% - 40px);
+  }
+}

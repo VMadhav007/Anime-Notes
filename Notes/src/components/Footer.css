@@ -1,0 +1,16 @@
+/* Footer Styling - Alternative */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 50px; /* Add space above the footer */
+    font-family: 'Inter', sans-serif;
+    clear: both; /* Clear any floats from notes */
+  }
+  
+  footer p {
+    color: var(--black);
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
